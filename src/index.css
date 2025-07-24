@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;600;700&display=swap");
+@import "tailwindcss";
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background-color: black;
+}
+h1,
+h2,
+h3 {
+  font-family: "Anton", sans-serif;
+}
+@layer utilities {
+  @keyframes loadingBar {
+    0% {
+      width: 0%;
+    }
+    100% {
+      width: 100%;
+    }
+  }
+
+  .animate-loading-bar {
+    animation: loadingBar 6s linear forwards;
+  }
+}
