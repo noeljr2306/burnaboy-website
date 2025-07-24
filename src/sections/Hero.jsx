@@ -23,13 +23,13 @@ const Hero = ({ triggerAnimation }) => {
   return (
     <section
       ref={heroRef}
-      className="flex flex-col items-center justify-center min-h-[90vh] sm:pt-75 pt-125 text-white space-y-4 opacity-0 translate-y-7"
+      className="flex flex-col items-center justify-center min-h-[90vh] xs:pt-20 sm:pt-32 md:pt-48 lg:pt-56 xl:pt-64 2xl:pt-72 text-white space-y-4 opacity-0 translate-y-7"
     >
-      <div className="text-center">
-        <h1 className="text-6xl md:text-9xl font-black mb-8 drop-shadow-2xl text-yellow-400 tracking-[0.2em]">
+      <div className="text-center px-4 sm:px-8 md:px-16 lg:px-24 xl:px-32 2xl:px-40">
+        <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-black mb-6 sm:mb-8 drop-shadow-2xl text-yellow-400 tracking-[0.2em]">
           BURNA BOY
         </h1>
-        <p className="text-lg md:text-2xl text-yellow-600 text-center font-black drop-shadow-lg">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl text-yellow-600 text-center font-black drop-shadow-lg">
           GRAMMY AWARD WINNING ARTIST • THE AFRICAN GIANT
         </p>
       </div>

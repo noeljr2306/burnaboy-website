@@ -76,7 +76,7 @@ const Navbar = ({ triggerAnimation }) => {
     <>
       <nav
         ref={navRef}
-        className="fixed top-0 left-0 w-full bg-transparent z-50 flex items-center justify-between px-12 py-3 h-16 opacity-0"
+        className="fixed top-0 left-0 w-full bg-transparent z-50 flex items-center justify-between px-5 py-3 h-16 opacity-0"
         style={{ opacity: 0 }}
       >
         <div className="flex items-center">
