@@ -145,20 +145,20 @@ const Album = () => {
   return (
     <section
       id="album"
-      className="w-full h-screen overflow-x-hidden py-8 text-white bg-zinc-800"
+      className="w-full min-h-screen overflow-x-hidden py-4 sm:py-8 text-white bg-zinc-800 flex flex-col justify-center"
       ref={containerRef}
     >
-      <h2 className="text-center text-7xl font-bold mb-12 text-yellow-400">
+      <h2 className="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-6 sm:mb-8 md:mb-12 text-yellow-400 px-4">
         Albums
       </h2>
-      <div className="flex gap-8 cursor-grab select-none pl-8 will-change-transform">
+      <div className="flex gap-4 sm:gap-6 md:gap-8 cursor-grab select-none pl-4 sm:pl-6 md:pl-8 will-change-transform">
         {albums.map((album, index) => (
           <a
             key={album.id}
             href={album.url}
-            className="album-item relative flex flex-col items-center flex-shrink-0 w-[600px] rounded-lg overflow-hidden shadow-lg"
+            className="album-item relative flex flex-col items-center flex-shrink-0 w-[280px] sm:w-[350px] md:w-[450px] lg:w-[600px] rounded-lg overflow-hidden shadow-lg"
           >
-            <div className="relative w-full h-[500px] rounded-t-lg overflow-hidden">
+            <div className="relative w-full h-[350px] sm:h-[400px] md:h-[450px] lg:h-[500px] rounded-t-lg overflow-hidden">
               <img
                 src={album.image}
                 alt={album.title}
@@ -167,17 +167,17 @@ const Album = () => {
               />
 
               <div
-                className="album-info absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 pointer-events-none"
+                className="album-info absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-3 sm:p-4 md:p-6 pointer-events-none"
                 ref={(el) => (albumInfoRef.current[index] = el)}
               >
                 <div className="text-content">
-                  <h3 className="text-2xl font-bold mb-2 text-yellow-400 drop-shadow-lg">
+                  <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-1 sm:mb-2 text-yellow-400 drop-shadow-lg">
                     {album.title}
                   </h3>
-                  <p className="text-sm text-gray-200 mb-1 drop-shadow">
+                  <p className="text-xs sm:text-sm text-gray-200 mb-1 drop-shadow">
                     Released: {album.year}
                   </p>
-                  <p className="text-sm text-gray-200 mb-3 drop-shadow">
+                  <p className="text-xs sm:text-sm text-gray-200 mb-2 sm:mb-3 drop-shadow">
                     {album.tracks} Tracks • {album.genre}
                   </p>
                   <div className="flex items-center gap-2">
@@ -190,11 +190,11 @@ const Album = () => {
               </div>
 
               <div
-                className="play-button absolute bottom-4 right-4 w-10 h-10 bg-white rounded-full flex items-center justify-center cursor-pointer select-none transition-colors duration-300 hover:bg-white/90 z-10"
+                className="play-button absolute bottom-3 right-3 sm:bottom-4 sm:right-4 w-8 h-8 sm:w-10 sm:h-10 bg-white rounded-full flex items-center justify-center cursor-pointer select-none transition-colors duration-300 hover:bg-white/90 z-10"
                 ref={(el) => (playButtonsRef.current[index] = el)}
                 aria-label={`Play ${album.title}`}
               >
-                <div className="play-icon w-0 h-0 border-l-[14px] border-l-gray-900 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent ml-1"></div>
+                <div className="play-icon w-0 h-0 border-l-[10px] sm:border-l-[14px] border-l-gray-900 border-t-[6px] sm:border-t-[8px] border-t-transparent border-b-[6px] sm:border-b-[8px] border-b-transparent ml-0.5 sm:ml-1"></div>
               </div>
             </div>
           </a>
